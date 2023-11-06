@@ -1,0 +1,44 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h1>New Food</h1>
+            <div class="card-body"></div>
+            <form action="/food/new-food" method="POST">
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="Nombre" autofocus>
+                </div></br>
+                <div class="form-group">
+                    <textarea name="description" class="form-control" placeholder="Descripción"></textarea>
+                </div></br>
+                <div class="form-group">
+                    <input type="number" name="price" class="form-control" placeholder="Precio">
+                </div></br>
+                <div class="form-group">
+                    <label for="image">Seleccionar imagen:</label>
+                    <input type="file" name="image" id="image" accept="image/*" style="display: none;">
+                    <input type="text" id="image-text" class="form-control" placeholder="Imagen" readonly>
+                    <button type="button" id="image-button"
+                        onclick="document.getElementById('image').click()">Seleccionar imagen</button>
+
+                </div></br>
+                <div class="form-group">
+                    {{!-- <input type="text" name="category" class="form-control" placeholder="Categoría / Tipo"> --}}
+                    <label for="category">Categoría / Tipo:</label>
+                    <select name="category" class="form-control" id="category">
+                        <option value="comida">Comida</option>
+                        <option value="bebida">Bebida</option>
+                        <option value="postre">Postre</option>
+                        <option value="agregado">Agregado</option>
+                        <option value="infusion">Infusión</option>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                </div></br>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Guardar Nuevo elemento
+
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
